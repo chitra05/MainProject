@@ -15,6 +15,8 @@
 		5A144E202043FCDC0093784A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A144E1E2043FCDC0093784A /* LaunchScreen.storyboard */; };
 		5A144E232043FCDC0093784A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A144E222043FCDC0093784A /* main.m */; };
 		5A144E2D2043FCDD0093784A /* MainProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A144E2C2043FCDD0093784A /* MainProjectTests.m */; };
+		5A5C002B204538F900D8DC81 /* TestFram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5C002A204538F900D8DC81 /* TestFram.framework */; };
+		5A5C002C204538F900D8DC81 /* TestFram.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5C002A204538F900D8DC81 /* TestFram.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,20 @@
 			remoteInfo = MainProject;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5A5C000220450EA500D8DC81 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5A5C002C204538F900D8DC81 /* TestFram.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5A144E0D2043FCDC0093784A /* MainProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +58,7 @@
 		5A144E282043FCDD0093784A /* MainProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A144E2C2043FCDD0093784A /* MainProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainProjectTests.m; sourceTree = "<group>"; };
 		5A144E2E2043FCDD0093784A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A5C002A204538F900D8DC81 /* TestFram.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TestFram.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A5C002B204538F900D8DC81 /* TestFram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,9 +83,11 @@
 		5A144E042043FCDC0093784A = {
 			isa = PBXGroup;
 			children = (
+				5A5C002A204538F900D8DC81 /* TestFram.framework */,
 				5A144E0F2043FCDC0093784A /* MainProject */,
 				5A144E2B2043FCDD0093784A /* MainProjectTests */,
 				5A144E0E2043FCDC0093784A /* Products */,
+				5A5CFFFC20450C5100D8DC81 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +126,13 @@
 			path = MainProjectTests;
 			sourceTree = "<group>";
 		};
+		5A5CFFFC20450C5100D8DC81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,6 +143,7 @@
 				5A144E092043FCDC0093784A /* Sources */,
 				5A144E0A2043FCDC0093784A /* Frameworks */,
 				5A144E0B2043FCDC0093784A /* Resources */,
+				5A5C000220450EA500D8DC81 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -362,7 +390,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R3Q753JPDW;
+				DEVELOPMENT_TEAM = 7A9JA8PNZH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MainProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MainProject;
@@ -376,7 +408,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R3Q753JPDW;
+				DEVELOPMENT_TEAM = 7A9JA8PNZH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MainProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MainProject;

@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)tapToUseFramework:(id)sender;
+@property (weak, nonatomic) IBOutlet UIView *changeColorView;
 
 @end
 
